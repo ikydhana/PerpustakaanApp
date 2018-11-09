@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.8.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 06, 2018 at 03:46 PM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.2.3
+-- Waktu pembuatan: 09 Nov 2018 pada 03.57
+-- Versi server: 10.1.34-MariaDB
+-- Versi PHP: 7.2.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,18 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `petugas`
+-- Struktur dari tabel `penerbit`
+--
+
+CREATE TABLE `penerbit` (
+  `id` int(11) NOT NULL,
+  `penerbit` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `petugas`
 --
 
 CREATE TABLE `petugas` (
@@ -35,56 +46,37 @@ CREATE TABLE `petugas` (
   `password` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `tb_penerbit`
---
-
-CREATE TABLE `tb_penerbit` (
-  `id` int(11) NOT NULL,
-  `penerbit` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tb_penerbit`
---
-
-INSERT INTO `tb_penerbit` (`id`, `penerbit`) VALUES
-(1, 'Rifky Wardana'),
-(2, 'Muhammad Rifky Wardana');
-
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `petugas`
+-- Indeks untuk tabel `penerbit`
+--
+ALTER TABLE `penerbit`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `petugas`
 --
 ALTER TABLE `petugas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_penerbit`
---
-ALTER TABLE `tb_penerbit`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `petugas`
+-- AUTO_INCREMENT untuk tabel `penerbit`
+--
+ALTER TABLE `penerbit`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT untuk tabel `petugas`
 --
 ALTER TABLE `petugas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `tb_penerbit`
---
-ALTER TABLE `tb_penerbit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

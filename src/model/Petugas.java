@@ -5,9 +5,15 @@ public class Petugas {
     private String username;
     private String password;
 
-public Petugas (){
-    
-}
+    public Petugas() {
+    }
+
+    public Petugas(int id, String namaPetugas, String username, String password) {
+        this.id = id;
+        this.namaPetugas = namaPetugas;
+        this.username = username;
+        this.password = password;
+    }
 
     public int getId() {
         return id;
@@ -40,12 +46,6 @@ public Petugas (){
     public void setPassword(String password) {
         this.password = password;
     }
-
-    public Petugas(int id, String namaPetugas, String username, String password) {
-        this.id = id;
-        this.namaPetugas = namaPetugas;
-        this.username = username;
-        this.password = password;
-    }
+    
     
 }
